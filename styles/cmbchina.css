@@ -1,0 +1,541 @@
+html,body {
+  height: 100%;
+  position: relative;
+}
+body{
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  color: #000;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+/*全局向上箭头*/
+.up-arrow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin:0 auto;
+  bottom: 40px;
+  width: 75px;
+  z-index: 11;
+  opacity: 0.8;
+}
+.up-arrow img {
+  width: 100%;
+  animation: upArrow 1.5s infinite ease-in-out;
+}
+
+/*全局音乐*/
+@-webkit-keyframes music {
+  to{
+    transform:rotate(360deg);
+  }
+}
+.btn-music-on {
+  position: absolute;
+  background: url('../images/musicBtn.png') 50% 50% no-repeat;
+  padding:50%;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  animation:music 5s infinite linear;
+}
+.btn-music-off{
+  background:  url('../images/musicBtnOff.png') 50% 50% no-repeat;
+}
+/*分页*/
+.swiper-slide {
+  font-size: 18px;
+  text-align: center;
+  background-color: #fff;
+}
+
+/************第一页************/
+.index-txt,
+.index-txt img:nth-child(2),
+.index-txt img:nth-child(3),
+.index-flight,
+.index-element,
+.index-cloud,
+.index-stars,
+.index-building{
+  position: absolute;
+  text-align: center;
+  z-index: 9;
+}
+/*文字*/
+.index-txt{
+  width: 100%;
+  height: 250px;
+  margin: 15% 0 10%;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.index-txt img:nth-child(2){
+  left: 65px;
+}
+.index-txt img:nth-child(3){
+  top: 130px;
+  right: 150px;
+}
+/*飞机*/
+.index-flight {
+  top: 43%;
+  left: 0;
+  right: 0;
+}
+/*元素*/
+.index-element {
+  top: 0;
+  left: 0;
+  right:0;
+  z-index:3;
+}
+.index-element img,
+.index-flight img{
+  animation: zoom 3s infinite linear;
+}
+.index-element img {
+  animation-delay: 1s;
+}
+/*云*/
+.index-cloud {
+  top: 100px;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.index-cloud img{
+  animation: zoom 2s infinite linear;
+  animation-delay: 2s;
+}
+/*星星*/
+.index-stars{
+  animation: zoom 3s infinite linear;
+  animation-delay: 0.5s;
+}
+/*楼*/
+.index-building {
+  bottom: 0;
+}
+/************第二页************/
+.swiper-slide:nth-child(2){
+  background-color: #000;
+}
+/*背景*/
+.ws-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:  url('../images/wasBg.jpg') 50% 100% no-repeat;
+}
+/*线*/
+.ws-line {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background:  url('../images/wasStar.png') 50% 50% no-repeat;
+  z-index: 2;
+}
+/*文字容器*/
+.xy-c {
+  position: absolute;
+  top: 35%;
+  left: 20%;
+}
+/*整体文字*/
+.was-txt {
+  position: relative;
+  z-index: 3;
+}
+/*上文字*/
+.was-it {
+  margin-bottom: 50px;
+}
+/*下文字*/
+.was-farm {
+  left:10px;
+}
+/************第三页************/
+.swiper-slide:nth-child(3){
+  z-index: 10;
+  background-color: #01172c;
+}
+/*黑夜背景*/
+.early-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/*凌晨标题*/
+.title {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+/*凌晨建筑*/
+.b-build {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.block-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.abs {
+  position: absolute;
+}
+/*汽车*/
+.last-bus {
+  position: absolute;
+  left: -20px;
+  bottom: 5%;
+}
+/*人物*/
+.bus-avatar {
+  right: 0;
+  bottom: 5%;
+}
+/*背景*/
+.where-bg {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #000;
+}
+.where-bg img{
+  width: 100%;
+  height: 100%;
+}
+/*人物下背景*/
+.where-wall {
+  bottom: 0;
+  right: 0;
+  height: 60%;
+}
+/*在哪里*/
+.where-txt {
+  width: 100%;
+  bottom: 12%;
+  text-align: center;
+}
+/*我的*/
+.where-myteam {
+  left: 15%;
+  top: 30%;
+}
+/*人物下背景*/
+.where-avatar {
+  z-index: 3;
+  right: 5%;
+  bottom: 51%;
+}
+/*人物*/
+.wall-avatar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/************第四页************/
+/*灯亮*/
+.light-on {
+  display: none;
+  background-color: #1a7fdc;
+}
+/*灯暗,点灯按钮ON*/
+.light-btn-on {
+  display: none;
+}
+/*灯暗,点灯按钮ON*/
+.light-btn {
+  left: 2%;
+  top: 15%;
+  z-index: 2;
+}
+/*灯暗,灯亮容器*/
+.light-page {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+/*灯暗状态*/
+.light-off {
+  background-color: #302e5c;
+}
+/*1.灯暗,灯亮背景*/
+.light-page .light-bg {
+  bottom: -2px;
+  z-index: 1;
+}
+/*标题,转角遇到他*/
+.light-title {
+  top: 5%;
+  right: 0;
+  z-index: 3;
+}
+/*点击提示文字,点亮它别犹豫*/
+.light-click-guide {
+  left: 30%;
+  top: 28%;
+  z-index: 3;
+}
+/*右边建筑背景*/
+.light-off-wall {
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+}
+/*两朵花*/
+.light-flowers {
+  right: 5%;
+  bottom: -12px;
+  z-index: 2;
+}
+/*我们懂你*/
+.light-knowyou {
+  top: 15%;
+  left: 32%;
+  z-index: 2;
+}
+/************第五页************/
+.swiper-slide:nth-child(5){
+  z-index: 2;
+  text-align: center;
+  background: #658b0e url(../images/aboutBg.jpg) 0 100% no-repeat;
+}
+/*踢足球*/
+.foot-avatar {
+  left:0;
+  right: 0;
+  top: 15%;
+  width: 100%;
+  height: 100%;
+}
+/*够大的舞台,放胆过来*/
+.foot-txt {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 65%;
+}
+/*Ta没有浮夸..只有*/
+.foot-ta {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 65%;
+}
+/*建筑*/
+.foot-city {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/************第六页************/
+.swiper-slide:nth-child(6){
+  background: #837571 url(../images/runBg.jpg) 0 0 no-repeat;
+  text-align: center;
+}
+/*人物*/
+.run-avatar {
+  position: absolute;
+  left: 9%;
+  top: 10%;
+  text-align: center;
+}
+/*道路在脚下,我们共..*/
+.run-txt {
+  position: absolute;
+  left: 22%;
+  top: 55%;
+}
+/*Ta没有花..只是脚*/
+.run-ta {
+  position: absolute;
+  left: 13%;
+  top: 52%;
+}
+/************第七页************/
+.swiper-slide:nth-child(7) {
+  background: #4add9d;
+  text-align: center;
+  position: relative;
+}
+/*顶部*/
+.city-avatar {
+  position: relative;
+  width: 100%;
+  height: 80%;
+  /*top: -10%;*/
+}
+/*圆背景*/
+.salary-city {
+  position: absolute;
+  top: 3%;
+  left: 0;
+  right: 0;
+}
+.salary-city img{
+  width: 70%;
+  height: 70%;
+}
+/*人物*/
+.salary-avatar {
+  position: absolute;
+  top: 3%;
+  left: 0%;
+  margin-top: 40px;
+  text-align: center;
+  width: 92%;
+}
+.salary-avatar img {
+  width: 40%;
+  height: 40%;
+}
+/*TA没有好高骛远.只是..*/
+.salary-ta {
+  position: absolute;
+  left: 10%;
+  top: 60%;
+}
+/*我们出手不凡,你们无需*/
+.salary-txt {
+  position: absolute;
+  left: 20%;
+  top: 60%;
+}
+
+
+/************第八页************/
+.swiper-slide:nth-child(8){
+  background: #b5effd;
+  text-align: center;
+}
+/*logo*/
+.intro-logo {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+/*文字内容*/
+.intro-txt {
+  background: #fc5955;
+  padding: 65px;
+  margin: 15px;
+  height: 70%;
+  border-radius: 20px;
+  position: absolute;
+  z-index: 3;
+  overflow: hidden;
+  top: 10%;
+}
+.intro-txt-inner {
+  background: #ef3d38;
+  padding: 80px 20px 150px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 24px;
+  line-height: 150%;
+  height: 67%;
+}
+.intro-txt-inner p {
+  /*left: 150%;*/
+  text-align: left;
+  text-indent:48px;
+}
+/*两朵花*/
+.intro-flower {
+  left: 2%;
+  top: 5%;
+}
+/*人物-*/
+.intro-avatar {
+  position: absolute;
+  bottom: -3px;
+  right: 10%;
+  z-index: 3;
+}
+.intro-avatar img{
+  width: 160px;
+  height: 200px;
+}
+/*星星*/
+.intro-star {
+  right: 200px;
+  bottom: 100px;
+  z-index: 4;
+}
+/*云-*/
+.intro-cloudy {
+  top: 110px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 4;
+}
+
+/************第九页************/
+.swiper-slide:nth-child(9){
+  text-align: center;
+  background: #3e88f1 url('../images/endBg.png') no-repeat;
+  background-size: 100% 100%;
+}
+/*logo*/
+.end-logo {
+  left: 0;
+  right: 0;
+  top: 8%;
+}
+/*世界那么大..*/
+.end-txt {
+  left: 0;
+  right: 0;
+  top: 20%;
+}
+/*简历邮箱*/
+.end-mail {
+  left: 0;
+  right: 0;
+  top: 40%;
+}
+/*猛戳飞机有惊喜*/
+.end-clickguide {
+  left: 0;
+  right: 0;
+  top: 50%;
+}
+/*飞机*/
+.end-avatar {
+  z-index: 9999;
+  display: block !important;
+  position: relative;
+  top: 60%;
+}
+/*云彩*/
+.end-cloudys {
+  left: 0;
+  width: 100%;
+  top: 10%;
+}
+/*银河...不见不散*/
+.end-bottom-txt {
+  bottom: 25px;
+  width: 100%;
+  z-index: 100;
+  background-color: #3e88f1;
+}
+
